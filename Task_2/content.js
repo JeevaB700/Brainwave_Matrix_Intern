@@ -8,9 +8,10 @@ function dynamicClothingSection(ob) {
   boxDiv.id = "box";
 
   let boxLink = document.createElement("a");
-  // boxLink.href = '#'
-  boxLink.href = "/contentDetails.html?" + ob.id;
-  // console.log('link=>' + boxLink);
+// Create the link to contentDetails.html
+boxLink.href = "contentDetails.html?id=" + encodeURIComponent(ob.id); // Use relative path
+console.log('Link:', boxLink.href); // Check the generated link
+
 
   let imgTag = document.createElement("img");
   // imgTag.id = 'image1'
